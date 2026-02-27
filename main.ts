@@ -126,10 +126,11 @@ app.post('/identify', async (req: Request, res: Response) => {
     }
 });
 
-// Set the port and launch
-const APP_PORT = 3000;
+// Use the port provided by Render (10000), or 3000 for local testing
+const APP_PORT = process.env.PORT || 3000;
+
 initializeServer().then(() => {
-    app.listen(APP_PORT, () => {
+    app.listen(APP_PORT, '0.0.0.0', () => {
         console.log(`Identity Service is now running on port ${APP_PORT}`);
     });
 });
