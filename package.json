@@ -1,0 +1,26 @@
+{
+  "name": "solution",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.ts",
+  "scripts": {
+  "start": "node --loader ts-node/esm main.ts",
+  "dev": "npx ts-node --esm main.ts"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Bitespeed Identity Resolution Task",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
