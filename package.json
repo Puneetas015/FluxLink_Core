@@ -2,15 +2,12 @@
   "name": "fluxlink_core",
   "version": "1.0.0",
   "type": "module",
-  "main": "main.ts",
+  "main": "dist/main.js",
   "scripts": {
-    "start": "node --loader ts-node/esm main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
     "dev": "node --loader ts-node/esm main.ts"
   },
-  "keywords": [],
-  "author": "Punit Tiwari",
-  "license": "ISC",
-  "description": "FluxLink_Core Identity Resolution Engine",
   "dependencies": {
     "express": "^4.18.2",
     "body-parser": "^1.20.2",
