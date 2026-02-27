@@ -28,3 +28,8 @@ The service listens for POST requests at http://localhost:3000/identify.
 Below is a real-world demonstration of the service resolving identities across three separate requests. It correctly identifies the primary contact and links subsequent new information (emails and IDs) as secondary records.
 
 Developed as a high-performance solution for unified customer data management.
+
+## 🌐 Live API Endpoint
+The service is deployed and live at:
+`https://fluxlink-core.onrender.com/identify`
+> **Note**: This service is hosted on a free instance. If the first request takes a few seconds to respond, the server is likely "waking up" from sleep mode.
