@@ -1,26 +1,24 @@
 {
-  "name": "solution",
+  "name": "fluxlink_core",
   "version": "1.0.0",
   "type": "module",
   "main": "main.ts",
   "scripts": {
-  "start": "node --loader ts-node/esm main.ts",
-  "dev": "npx ts-node --esm main.ts"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "Bitespeed Identity Resolution Task",
-  "dependencies": {
-    "body-parser": "^2.2.2",
-    "express": "^5.2.1",
-    "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "start": "node --loader ts-node/esm main.ts",
+    "dev": "node --loader ts-node/esm main.ts"
   },
-  "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.3.2",
+  "keywords": [],
+  "author": "Punit Tiwari",
+  "license": "ISC",
+  "description": "FluxLink_Core Identity Resolution Engine",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.3.3",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.11.0"
   }
 }
