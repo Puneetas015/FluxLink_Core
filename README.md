@@ -14,20 +14,39 @@ When a new order comes in, the system follows a logical "Detective" process:
 - **Database**: SQLite3 (chosen for its speed and zero-config portability)
 - **Framework**: Express.js
 
+## 📊 System Output Proof
+Below is a step-by-step demonstration of the Identity Resolution engine in action.
+
+### 1. Initial Primary Contact Creation
+The system creates a new primary record when no existing email or phone is found.
+![Initial Primary](./results/01_initial_primary_contact.png)
+
+### 2. Linking via Email (Secondary)
+When a request comes with an existing email but a new phone number, it is linked as a secondary record.
+![Secondary Email Link](./results/02_secondary_link_email.png)
+
+### 3. Linking via Phone (Secondary)
+When a request comes with an existing phone but a new email, it is also consolidated.
+![Secondary Phone Link](./results/03_secondary_link_phone.png)
+
+### 4. Primary to Secondary Merge (Master Test)
+The system identifies when two previously independent primary contacts should be merged into one, converting the newer primary to secondary.
+![Primary Merge](./results/04_primary_to_secondary_merge.png)
+
+
+
 ## 📦 Local Setup
 1. **Install dependencies**:
    ```bash
    npm install
+   ```
 2. Launch the Service:
    ```bash
-   node --loader ts-node/esm main.ts
+   npm run dev
+   ```
 3. Test the Endpoint:
 The service listens for POST requests at http://localhost:3000/identify.
 
-📊 System Output Proof
-Below is a real-world demonstration of the service resolving identities across three separate requests. It correctly identifies the primary contact and links subsequent new information (emails and IDs) as secondary records.
-
-Developed as a high-performance solution for unified customer data management.
 
 ## 🌐 Live API Endpoint
 The service is deployed and live at:
