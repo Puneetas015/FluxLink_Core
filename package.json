@@ -2,13 +2,11 @@
   "name": "fluxlink_core",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/main.js",
+  "main": "main.ts",
   "scripts": {
-  "build": "tsc main.ts --outDir dist --module NodeNext --target ESNext --moduleResolution NodeNext",
-  "start": "node dist/main.js",
-  "dev": "node --loader ts-node/esm main.ts"
-},
-  
+    "start": "node --loader ts-node/esm main.ts",
+    "build": "echo 'No build needed'"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "body-parser": "^1.20.2",
